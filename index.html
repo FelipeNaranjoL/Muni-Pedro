@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portal oficial de la Ilustre Municipalidad de El Monte. Trámites en línea, servicios municipales, Ruta de la Patria y atención ciudadana." />
+  <title>Municipalidad de El Monte — Donde nace la patria</title>
+
+  <!-- Google Fonts: Baloo 2 y Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS + Configuración de Marca -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/config.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    referrerpolicy="no-referrer" />
+
+  <!-- Estilos Personalizados -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="antialiased selection:bg-patria-yellow selection:text-patria-blue">
+
+  <!-- ===================================================================== -->
+  <!-- 1. BARRA SUPERIOR INSTITUCIONAL Y NAVEGACIÓN                          -->
+  <!-- ===================================================================== -->
+  <header id="top-nav"
+    class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-colors">
+    <div class="bg-patria-blue text-white text-xs py-1.5 px-4">
+      <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+        <div class="flex items-center gap-4">
+          <span class="inline-flex items-center gap-1.5 font-medium">
+            <i class="fa-solid fa-phone text-patria-yellow" aria-hidden="true"></i>
+            Mesa Central:
+            <a href="tel:+56225609700" class="underline hover:text-patria-yellow">2 2560 9700</a>
+          </span>
+          <span class="hidden md:inline-flex items-center gap-1.5 text-blue-100">
+            <i class="fa-regular fa-clock text-patria-yellow" aria-hidden="true"></i>
+            Lun a Vie: 08:30 – 14:00 hrs
+          </span>
+        </div>
+        <div class="flex items-center gap-3">
+          <button type="button" data-tramite="transparencia"
+            class="hover:text-patria-yellow transition font-medium inline-flex items-center gap-1 cursor-pointer">
+            <i class="fa-solid fa-scale-balanced text-patria-yellow" aria-hidden="true"></i>
+            Transparencia Activa
+          </button>
+          <span class="text-blue-400" aria-hidden="true">|</span>
+          <a href="#emergencias" class="text-patria-yellow font-bold hover:underline inline-flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-patria-red inline-block"></span>
+            Emergencias
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center gap-3 group focus:outline-none"
+        aria-label="Inicio Municipalidad de El Monte">
+        <svg class="h-14 w-auto transition-transform duration-300 group-hover:scale-105" viewBox="0 0 260 112"
+          fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Municipalidad de El Monte">
+          <circle cx="172" cy="34" r="21" fill="#FFD500" />
+          <path
+            d="M56 54V42L70 34V22H65V18H70V11H74V18H79V22H74V34L88 42V50L106 58L136 42C142 39 148 40 153 44L165 53L177 48C182 46 187 47 192 50L224 64"
+            stroke="#0039A6" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M69 27C69 25.3431 70.3431 24 72 24C73.6569 24 75 25.3431 75 27V32H69V27Z" fill="#0039A6" />
+          <text x="24" y="84" fill="#0039A6" font-family="'Baloo 2', sans-serif" font-weight="800" font-size="40"
+            letter-spacing="-0.5">El Monte</text>
+          <path d="M52 94C95 85 140 87 185 95" stroke="#0039A6" stroke-width="4" stroke-linecap="round" />
+          <path d="M156 91C182 86 205 87 226 92" stroke="#FFD500" stroke-width="4.5" stroke-linecap="round" />
+          <line x1="28" y1="104" x2="44" y2="104" stroke="#FFD500" stroke-width="2.5" stroke-linecap="round" />
+          <text x="130" y="107" text-anchor="middle" fill="#0039A6" font-family="'Montserrat', sans-serif"
+            font-weight="700" font-size="8.5" letter-spacing="2.2">DONDE NACE LA PATRIA</text>
+          <line x1="216" y1="104" x2="232" y2="104" stroke="#FFD500" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+      </a>
+
+      <nav aria-label="Navegación principal"
+        class="hidden lg:flex items-center gap-7 font-semibold text-sm text-slate-700">
+        <a href="#inicio" class="hover:text-patria-blue transition">Inicio</a>
+        <a href="#tramites" class="hover:text-patria-blue transition">Trámites y Servicios</a>
+        <a href="#ruta-patria"
+          class="text-patria-blue font-bold flex items-center gap-1.5 bg-blue-50 px-3 py-1.5 rounded-full hover:bg-patria-yellow hover:text-patria-blue transition">
+          <i class="fa-solid fa-landmark text-xs" aria-hidden="true"></i> Ruta de la Patria
+        </a>
+        <a href="#noticias" class="hover:text-patria-blue transition">Noticias</a>
+        <a href="#contacto" class="hover:text-patria-blue transition">Contacto</a>
+      </nav>
+
+      <div class="flex items-center gap-2.5">
+        <button type="button" data-action="start-tour" id="nav-tour-btn"
+          class="inline-flex items-center gap-2 bg-patria-yellow hover:bg-yellow-400 text-patria-blue font-bold text-xs sm:text-sm px-4 py-2.5 rounded-full shadow-yellow-glow transition transform hover:-translate-y-0.5 cursor-pointer">
+          <span class="w-6 h-6 rounded-full bg-patria-blue text-white flex items-center justify-center text-[10px]">
+            <i class="fa-solid fa-play ml-0.5" aria-hidden="true"></i>
+          </span>
+          <span>Recorrido en Video</span>
+        </button>
+
+        <button type="button" id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu"
+          class="lg:hidden p-2.5 rounded-xl text-patria-blue hover:bg-blue-50 focus:outline-none cursor-pointer"
+          aria-label="Abrir menú">
+          <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu"
+      class="hidden lg:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-5 space-y-2 shadow-lg">
+      <a href="#inicio" data-close-menu
+        class="block px-4 py-2.5 rounded-xl font-semibold text-slate-700 hover:bg-blue-50 hover:text-patria-blue">Inicio</a>
+      <a href="#tramites" data-close-menu
+        class="block px-4 py-2.5 rounded-xl font-semibold text-slate-700 hover:bg-blue-50 hover:text-patria-blue">Trámites
+        y Servicios</a>
+      <a href="#ruta-patria" data-close-menu
+        class="block px-4 py-2.5 rounded-xl font-bold text-patria-blue bg-blue-50">Ruta de la Patria — (Re)Vive la
+        Patria</a>
+      <a href="#noticias" data-close-menu
+        class="block px-4 py-2.5 rounded-xl font-semibold text-slate-700 hover:bg-blue-50 hover:text-patria-blue">Noticias
+        y Agenda</a>
+      <a href="#contacto" data-close-menu
+        class="block px-4 py-2.5 rounded-xl font-semibold text-slate-700 hover:bg-blue-50 hover:text-patria-blue">Contacto
+        y OIRS</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================================================================== -->
+    <!-- 2. HERO PRINCIPAL                                                     -->
+    <!-- ===================================================================== -->
+    <section id="inicio" data-tour-step="0"
+      class="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-gradient-to-br from-patria-blue via-[#00318F] to-[#001F5C] text-white relative overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-patria-yellow/15 blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 right-0 h-16 bg-white hero-wave-bottom pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div class="lg:col-span-7 space-y-6">
+            <div
+              class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide">
+              <span class="w-2.5 h-2.5 rounded-full bg-patria-yellow"></span>
+              <span>Portal Oficial • Ilustre Municipalidad de El Monte</span>
+            </div>
+
+            <h1 class="font-baloo text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] tracking-tight">
+              <span class="text-patria-yellow">(Re)Vive</span> la Patria.<br />
+              No es solo historia.<br />
+              <span
+                class="inline-block bg-patria-yellow text-patria-blue px-3 py-0.5 rounded-2xl mt-1 transform -rotate-1">Es
+                volver a vivirla.</span>
+            </h1>
+
+            <p class="text-blue-100 text-base sm:text-lg max-w-2xl leading-relaxed font-normal">
+              Bienvenido a la nueva plataforma digital de El Monte. Realiza tus trámites municipales en minutos, mantente
+              informado y recorre el territorio donde nació la Independencia de Chile.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#tramites"
+                class="inline-flex items-center justify-center gap-2.5 bg-white text-patria-blue hover:bg-blue-50 font-bold px-7 py-4 rounded-2xl shadow-lg transition transform hover:-translate-y-0.5 text-sm sm:text-base">
+                <i class="fa-solid fa-laptop-file" aria-hidden="true"></i>
+                <span>Explorar Trámites Online</span>
+              </a>
+
+              <button type="button" data-action="start-tour"
+                class="inline-flex items-center justify-center gap-3 bg-patria-yellow text-patria-blue hover:bg-yellow-300 font-extrabold px-7 py-4 rounded-2xl shadow-yellow-glow transition transform hover:-translate-y-0.5 text-sm sm:text-base cursor-pointer">
+                <i class="fa-solid fa-circle-play text-xl" aria-hidden="true"></i>
+                <span>Ver Recorrido en Video (0:45)</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="bg-white text-slate-900 rounded-3xl p-4 sm:p-5 shadow-2xl border-4 border-patria-yellow/90 relative">
+              <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-200">
+                <img src="https://images.unsplash.com/photo-1589802829985-817e51171b92?auto=format&fit=crop&w=900&q=80"
+                  data-fallback="assets/img/hitos/Iglesia.jpg"
+                  alt="Patrimonio arquitectónico colonial de El Monte" decoding="async"
+                  class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+
+                <div
+                  class="absolute top-3 left-3 bg-patria-blue text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow">
+                  <i class="fa-solid fa-location-dot text-patria-yellow" aria-hidden="true"></i> El Monte • #ReViveLaPatria
+                </div>
+
+                <div class="absolute bottom-4 left-4 right-4 text-white">
+                  <p class="text-xs uppercase tracking-wider text-patria-yellow font-bold mb-1">Destino Patrimonial y
+                    Educativo</p>
+                  <h2 class="font-baloo text-2xl font-extrabold leading-tight">Conoce la Ruta de la Patria</h2>
+                  <p class="text-xs text-slate-200 mt-1">Casa de los Carrera • Iglesia San Francisco • Museo Patrimonial</p>
+                </div>
+              </div>
+
+              <div class="mt-4 flex items-center justify-between gap-3 px-1">
+                <div>
+                  <span class="text-xs font-semibold text-slate-500 block">Salidas Pedagógicas y Turismo</span>
+                  <span class="text-sm font-bold text-patria-blue">Agenda tu visita guiada gratuita</span>
+                </div>
+                <a href="#ruta-patria"
+                  class="w-11 h-11 rounded-2xl bg-patria-blue text-patria-yellow hover:bg-patria-darkblue flex items-center justify-center transition shrink-0"
+                  aria-label="Ir a Ruta de la Patria">
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-white/15">
+          <p class="text-xs uppercase tracking-widest text-blue-200 font-bold mb-4 text-center sm:text-left">Accesos
+            Directos Más Buscados</p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+            <button type="button" data-tramite="permiso"
+              class="bg-white/10 hover:bg-patria-yellow hover:text-patria-blue backdrop-blur-sm border border-white/20 rounded-2xl p-3.5 text-left transition group cursor-pointer">
+              <i class="fa-solid fa-car text-patria-yellow group-hover:text-patria-blue text-lg mb-2 block"
+                aria-hidden="true"></i>
+              <span class="font-bold text-xs sm:text-sm block leading-snug">Permiso de Circulación</span>
+            </button>
+
+            <button type="button" data-tramite="salud"
+              class="bg-white/10 hover:bg-patria-yellow hover:text-patria-blue backdrop-blur-sm border border-white/20 rounded-2xl p-3.5 text-left transition group cursor-pointer">
+              <i class="fa-solid fa-heart-pulse text-patria-yellow group-hover:text-patria-blue text-lg mb-2 block"
+                aria-hidden="true"></i>
+              <span class="font-bold text-xs sm:text-sm block leading-snug">Portal Paciente CESFAM</span>
+            </button>
+
+            <button type="button" data-tramite="fondeve"
+              class="bg-white/10 hover:bg-patria-yellow hover:text-patria-blue backdrop-blur-sm border border-white/20 rounded-2xl p-3.5 text-left transition group cursor-pointer">
+              <i class="fa-solid fa-people-roof text-patria-yellow group-hover:text-patria-blue text-lg mb-2 block"
+                aria-hidden="true"></i>
+              <span class="font-bold text-xs sm:text-sm block leading-snug">Fondos FONDEVE</span>
+            </button>
+
+            <button type="button" data-tramite="omil"
+              class="bg-white/10 hover:bg-patria-yellow hover:text-patria-blue backdrop-blur-sm border border-white/20 rounded-2xl p-3.5 text-left transition group cursor-pointer">
+              <i class="fa-solid fa-briefcase text-patria-yellow group-hover:text-patria-blue text-lg mb-2 block"
+                aria-hidden="true"></i>
+              <span class="font-bold text-xs sm:text-sm block leading-snug">Empleo OMIL El Monte</span>
+            </button>
+
+            <button type="button" data-tramite="transparencia"
+              class="bg-white/10 hover:bg-patria-yellow hover:text-patria-blue backdrop-blur-sm border border-white/20 rounded-2xl p-3.5 text-left transition group cursor-pointer">
+              <i class="fa-solid fa-file-shield text-patria-yellow group-hover:text-patria-blue text-lg mb-2 block"
+                aria-hidden="true"></i>
+              <span class="font-bold text-xs sm:text-sm block leading-snug">Ley de Transparencia</span>
+            </button>
+
+            <a href="#contacto"
+              class="bg-white/10 hover:bg-patria-yellow hover:text-patria-blue backdrop-blur-sm border border-white/20 rounded-2xl p-3.5 text-left transition group">
+              <i class="fa-solid fa-headset text-patria-yellow group-hover:text-patria-blue text-lg mb-2 block"
+                aria-hidden="true"></i>
+              <span class="font-bold text-xs sm:text-sm block leading-snug">Atención Ciudadana</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 3. SECCIÓN 1: TRÁMITES Y SERVICIOS MUNICIPALES                        -->
+    <!-- ===================================================================== -->
+    <section id="tramites" data-tour-step="1" class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <span
+              class="inline-block bg-blue-50 text-patria-blue font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-3">
+              Gestión Municipal Ágil
+            </span>
+            <h2 class="font-baloo text-3xl sm:text-4xl lg:text-5xl font-extrabold text-patria-blue">
+              Trámites y Servicios en Línea
+            </h2>
+            <p class="text-slate-600 mt-2 max-w-2xl text-sm sm:text-base">
+              Simplificamos la navegación municipal. Selecciona una categoría o haz clic en el servicio que necesitas para
+              conocer requisitos y gestionar en línea.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-2" id="tramite-filters" role="group" aria-label="Filtrar trámites por categoría">
+            <button type="button" data-filter="todos"
+              class="filter-btn active bg-patria-blue text-white font-semibold text-xs sm:text-sm px-4 py-2.5 rounded-full transition cursor-pointer">
+              Todos (6)
+            </button>
+            <button type="button" data-filter="transito"
+              class="filter-btn bg-slate-100 hover:bg-blue-50 text-slate-700 font-semibold text-xs sm:text-sm px-4 py-2.5 rounded-full transition cursor-pointer">
+              Tránsito y Patentes
+            </button>
+            <button type="button" data-filter="social"
+              class="filter-btn bg-slate-100 hover:bg-blue-50 text-slate-700 font-semibold text-xs sm:text-sm px-4 py-2.5 rounded-full transition cursor-pointer">
+              Salud y Social
+            </button>
+            <button type="button" data-filter="institucional"
+              class="filter-btn bg-slate-100 hover:bg-blue-50 text-slate-700 font-semibold text-xs sm:text-sm px-4 py-2.5 rounded-full transition cursor-pointer">
+              Transparencia y Ordenanzas
+            </button>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="tramites-grid">
+          <article data-category="transito"
+            class="tramite-card group bg-white border border-slate-200/90 hover:border-patria-blue rounded-3xl p-6 shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-blue-50 text-patria-blue group-hover:bg-patria-blue group-hover:text-patria-yellow flex items-center justify-center text-2xl transition">
+                  <i class="fa-solid fa-car-side" aria-hidden="true"></i>
+                </div>
+                <span
+                  class="text-xs font-bold text-patria-blue bg-patria-lightyellow px-3 py-1 rounded-full">Tránsito</span>
+              </div>
+              <h3 class="font-baloo text-2xl font-bold text-slate-900 group-hover:text-patria-blue transition">
+                Permiso de Circulación y Licencias
+              </h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Paga tu Permiso de Circulación online, agenda hora para obtención o renovación de Licencia de Conducir y
+                consulta multas.
+              </p>
+            </div>
+            <button type="button" data-tramite="permiso"
+              class="mt-6 w-full py-3 px-4 rounded-xl bg-slate-50 group-hover:bg-patria-blue text-patria-blue group-hover:text-white font-bold text-sm flex items-center justify-center gap-2 transition cursor-pointer">
+              <span>Iniciar Trámite</span>
+              <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+            </button>
+          </article>
+
+          <article data-category="social"
+            class="tramite-card group bg-white border border-slate-200/90 hover:border-patria-blue rounded-3xl p-6 shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-blue-50 text-patria-blue group-hover:bg-patria-blue group-hover:text-patria-yellow flex items-center justify-center text-2xl transition">
+                  <i class="fa-solid fa-hospital-user" aria-hidden="true"></i>
+                </div>
+                <span class="text-xs font-bold text-patria-blue bg-blue-50 px-3 py-1 rounded-full">Salud Comunal</span>
+              </div>
+              <h3 class="font-baloo text-2xl font-bold text-slate-900 group-hover:text-patria-blue transition">
+                Salud y Portal Paciente CESFAM
+              </h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Accede al Portal Paciente de El Monte, solicitud de horas médicas, vacunación, Farmacia Comunal y
+                operativos en terreno.
+              </p>
+            </div>
+            <button type="button" data-tramite="salud"
+              class="mt-6 w-full py-3 px-4 rounded-xl bg-slate-50 group-hover:bg-patria-blue text-patria-blue group-hover:text-white font-bold text-sm flex items-center justify-center gap-2 transition cursor-pointer">
+              <span>Ingresar a Salud</span>
+              <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+            </button>
+          </article>
+
+          <article data-category="social"
+            class="tramite-card group bg-white border border-slate-200/90 hover:border-patria-blue rounded-3xl p-6 shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-blue-50 text-patria-blue group-hover:bg-patria-blue group-hover:text-patria-yellow flex items-center justify-center text-2xl transition">
+                  <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
+                </div>
+                <span class="text-xs font-bold text-patria-blue bg-blue-50 px-3 py-1 rounded-full">DIDECO</span>
+              </div>
+              <h3 class="font-baloo text-2xl font-bold text-slate-900 group-hover:text-patria-blue transition">
+                FONDEVE y Ayudas Sociales
+              </h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Postulación al Fondo de Desarrollo Vecinal (FONDEVE), Registro Social de Hogares, subsidios y Oficina
+                Local de la Niñez.
+              </p>
+            </div>
+            <button type="button" data-tramite="fondeve"
+              class="mt-6 w-full py-3 px-4 rounded-xl bg-slate-50 group-hover:bg-patria-blue text-patria-blue group-hover:text-white font-bold text-sm flex items-center justify-center gap-2 transition cursor-pointer">
+              <span>Ver Bases y Postular</span>
+              <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+            </button>
+          </article>
+
+          <article data-category="social"
+            class="tramite-card group bg-white border border-slate-200/90 hover:border-patria-blue rounded-3xl p-6 shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-blue-50 text-patria-blue group-hover:bg-patria-blue group-hover:text-patria-yellow flex items-center justify-center text-2xl transition">
+                  <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                </div>
+                <span class="text-xs font-bold text-patria-blue bg-patria-lightyellow px-3 py-1 rounded-full">Fomento y
+                  Empleo</span>
+              </div>
+              <h3 class="font-baloo text-2xl font-bold text-slate-900 group-hover:text-patria-blue transition">
+                OMIL y Emprendimiento Local
+              </h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Bolsa laboral comunal, inscripción para Ferias Laborales, capacitaciones SENCE y apoyo a pymes y artesanos
+                montinos.
+              </p>
+            </div>
+            <button type="button" data-tramite="omil"
+              class="mt-6 w-full py-3 px-4 rounded-xl bg-slate-50 group-hover:bg-patria-blue text-patria-blue group-hover:text-white font-bold text-sm flex items-center justify-center gap-2 transition cursor-pointer">
+              <span>Ofertas y Cursos</span>
+              <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+            </button>
+          </article>
+
+          <article data-category="institucional"
+            class="tramite-card group bg-white border border-slate-200/90 hover:border-patria-blue rounded-3xl p-6 shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-blue-50 text-patria-blue group-hover:bg-patria-blue group-hover:text-patria-yellow flex items-center justify-center text-2xl transition">
+                  <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+                </div>
+                <span class="text-xs font-bold text-patria-blue bg-blue-50 px-3 py-1 rounded-full">Ley 20.285</span>
+              </div>
+              <h3 class="font-baloo text-2xl font-bold text-slate-900 group-hover:text-patria-blue transition">
+                Transparencia Activa y Solicitudes
+              </h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Acceso directo a Transparencia Activa, Transparencia Histórica, Solicitud de Información Pública y
+                Concursos Públicos.
+              </p>
+            </div>
+            <button type="button" data-tramite="transparencia"
+              class="mt-6 w-full py-3 px-4 rounded-xl bg-slate-50 group-hover:bg-patria-blue text-patria-blue group-hover:text-white font-bold text-sm flex items-center justify-center gap-2 transition cursor-pointer">
+              <span>Portal Transparencia</span>
+              <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+            </button>
+          </article>
+
+          <article data-category="institucional"
+            class="tramite-card group bg-white border border-slate-200/90 hover:border-patria-blue rounded-3xl p-6 shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-blue-50 text-patria-blue group-hover:bg-patria-blue group-hover:text-patria-yellow flex items-center justify-center text-2xl transition">
+                  <i class="fa-solid fa-book-bookmark" aria-hidden="true"></i>
+                </div>
+                <span class="text-xs font-bold text-patria-blue bg-blue-50 px-3 py-1 rounded-full">Normativa Local</span>
+              </div>
+              <h3 class="font-baloo text-2xl font-bold text-slate-900 group-hover:text-patria-blue transition">
+                Ordenanzas, Cementerio y Ambiente
+              </h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Consulta Ordenanzas Municipales, gestión del Cementerio Municipal, Plan de Acción Climática y tenencia
+                responsable.
+              </p>
+            </div>
+            <button type="button" data-tramite="ordenanzas"
+              class="mt-6 w-full py-3 px-4 rounded-xl bg-slate-50 group-hover:bg-patria-blue text-patria-blue group-hover:text-white font-bold text-sm flex items-center justify-center gap-2 transition cursor-pointer">
+              <span>Revisar Documentos</span>
+              <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 4. SECCIÓN 2: RUTA DE LA PATRIA / "(RE)VIVE LA PATRIA"                -->
+    <!-- ===================================================================== -->
+    <section id="ruta-patria" data-tour-step="2"
+      class="py-16 lg:py-24 bg-slate-50 border-y border-slate-200/80 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span
+            class="inline-flex items-center gap-2 bg-patria-yellow text-patria-blue font-extrabold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 shadow-sm">
+            <i class="fa-solid fa-compass" aria-hidden="true"></i> Identidad y Patrimonio Comunal
+          </span>
+          <h2 class="font-baloo text-3xl sm:text-5xl font-extrabold text-patria-blue leading-tight">
+            Ruta de la Patria: <span class="underline decoration-patria-yellow decoration-4 underline-offset-4">Historia
+              que se vive</span>
+          </h2>
+          <p class="text-slate-600 mt-4 text-sm sm:text-base leading-relaxed">
+            Conectamos nuestros hitos de la Independencia, arquitectura colonial y paisajes naturales en una ruta
+            participativa para vecinos, visitantes y estudiantes.
+          </p>
+        </div>
+
+        <!-- Sistema de Titulares "(Re)..." -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-12" role="tablist"
+          aria-label="Dimensiones de la Ruta de la Patria">
+          <button type="button" data-re-tab="0"
+            class="re-tab active-re bg-patria-blue text-white p-4 sm:p-5 rounded-2xl text-left shadow-md transition cursor-pointer border-2 border-patria-blue">
+            <span class="font-baloo text-xl sm:text-2xl font-extrabold block"><span
+                class="text-patria-yellow">(Re)</span>corre</span>
+            <span class="text-xs sm:text-sm text-blue-100 font-medium">el territorio montino</span>
+          </button>
+
+          <button type="button" data-re-tab="1"
+            class="re-tab bg-white hover:bg-blue-50 text-patria-blue p-4 sm:p-5 rounded-2xl text-left shadow-sm transition cursor-pointer border-2 border-slate-200">
+            <span class="font-baloo text-xl sm:text-2xl font-extrabold block"><span
+                class="text-patria-yellow bg-patria-blue px-1 rounded">(Re)</span>conoce</span>
+            <span class="text-xs sm:text-sm text-slate-600 font-medium">tus raíces e identidad</span>
+          </button>
+
+          <button type="button" data-re-tab="2"
+            class="re-tab bg-white hover:bg-blue-50 text-patria-blue p-4 sm:p-5 rounded-2xl text-left shadow-sm transition cursor-pointer border-2 border-slate-200">
+            <span class="font-baloo text-xl sm:text-2xl font-extrabold block"><span
+                class="text-patria-yellow bg-patria-blue px-1 rounded">(Re)</span>encuentra</span>
+            <span class="text-xs sm:text-sm text-slate-600 font-medium">el patrimonio vivo</span>
+          </button>
+
+          <button type="button" data-re-tab="3"
+            class="re-tab bg-white hover:bg-blue-50 text-patria-blue p-4 sm:p-5 rounded-2xl text-left shadow-sm transition cursor-pointer border-2 border-slate-200">
+            <span class="font-baloo text-xl sm:text-2xl font-extrabold block"><span
+                class="text-patria-yellow bg-patria-blue px-1 rounded">(Re)</span>cuenta</span>
+            <span class="text-xs sm:text-sm text-slate-600 font-medium">la historia en terreno</span>
+          </button>
+        </div>
+
+        <!-- Mapa Interactivo de los 4 Hitos Históricos de El Monte -->
+        <div class="bg-white rounded-3xl shadow-card border border-slate-200 overflow-hidden mb-14">
+          <div class="grid lg:grid-cols-12">
+
+            <div class="lg:col-span-7 bg-[#EBF3FA] p-6 sm:p-8 relative flex flex-col justify-between min-h-[420px]">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-patria-blue">Mapa Patrimonial
+                    Interactivo</span>
+                  <h3 class="font-baloo text-2xl font-extrabold text-slate-900">Selecciona una parada de la ruta</h3>
+                </div>
+                <span class="bg-white text-patria-blue text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                  4 Hitos Conectados
+                </span>
+              </div>
+
+              <div id="hito-map"
+                class="relative w-full h-72 sm:h-80 bg-white rounded-2xl border border-blue-100 shadow-inner overflow-hidden">
+                <svg viewBox="0 0 600 320" class="w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect width="600" height="320" fill="#F4F9F4" />
+                  <path d="M0 90 Q140 35 280 75 T600 50 L600 0 L0 0 Z" fill="#DCEBD9" />
+                  <path d="M0 265 Q180 230 340 270 T600 245 L600 320 L0 320 Z" fill="#CBE4F9" />
+                  <path d="M0 265 Q180 230 340 270 T600 245" stroke="#3B89FF" stroke-width="4" fill="none"
+                    stroke-dasharray="6 4" />
+                  <path d="M115 115 C190 115, 210 185, 290 170 C360 155, 400 105, 475 120 C515 130, 500 220, 445 250"
+                    stroke="#0039A6" stroke-width="6" stroke-linecap="round" stroke-dasharray="10 8" fill="none" />
+                  <path d="M115 115 C190 115, 210 185, 290 170 C360 155, 400 105, 475 120 C515 130, 500 220, 445 250"
+                    stroke="#FFD500" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                </svg>
+
+                <button type="button" data-hito="0" id="pin-0"
+                  class="map-pin map-pin-active absolute top-[26%] left-[12%] sm:left-[15%] bg-patria-blue text-white px-3 py-2 rounded-2xl shadow-lg flex items-center gap-2 text-xs font-bold border-2 border-patria-yellow transition transform hover:scale-105 cursor-pointer">
+                  <span
+                    class="w-6 h-6 rounded-full bg-patria-yellow text-patria-blue flex items-center justify-center font-extrabold">1</span>
+                  <span>Casa de los Carrera</span>
+                </button>
+
+                <button type="button" data-hito="1" id="pin-1"
+                  class="map-pin absolute top-[48%] left-[38%] sm:left-[42%] bg-white text-patria-blue px-3 py-2 rounded-2xl shadow-md flex items-center gap-2 text-xs font-bold border-2 border-patria-blue transition transform hover:scale-105 cursor-pointer">
+                  <span
+                    class="w-6 h-6 rounded-full bg-patria-blue text-white flex items-center justify-center font-extrabold">2</span>
+                  <span>Iglesia San Francisco</span>
+                </button>
+
+                <button type="button" data-hito="2" id="pin-2"
+                  class="map-pin absolute top-[28%] right-[8%] sm:right-[12%] bg-white text-patria-blue px-3 py-2 rounded-2xl shadow-md flex items-center gap-2 text-xs font-bold border-2 border-patria-blue transition transform hover:scale-105 cursor-pointer">
+                  <span
+                    class="w-6 h-6 rounded-full bg-patria-blue text-white flex items-center justify-center font-extrabold">3</span>
+                  <span>Museo Patrimonial</span>
+                </button>
+
+                <button type="button" data-hito="3" id="pin-3"
+                  class="map-pin absolute bottom-[12%] right-[14%] sm:right-[18%] bg-white text-patria-blue px-3 py-2 rounded-2xl shadow-md flex items-center gap-2 text-xs font-bold border-2 border-patria-blue transition transform hover:scale-105 cursor-pointer">
+                  <span
+                    class="w-6 h-6 rounded-full bg-patria-blue text-white flex items-center justify-center font-extrabold">4</span>
+                  <span>Humedal Río Mapocho</span>
+                </button>
+              </div>
+
+              <div class="mt-4 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-600">
+                <span><i class="fa-solid fa-circle-info text-patria-blue mr-1" aria-hidden="true"></i> Haz clic en los
+                  puntos 1 al 4 para explorar cada hito.</span>
+                <span class="font-semibold text-patria-blue">Duración circuito completo: 2.5 hrs</span>
+              </div>
+            </div>
+
+            <!-- Panel Derecho: Ficha Detallada del Hito Seleccionado -->
+            <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between bg-white" id="hito-detail-panel">
+              <div>
+                <div class="relative rounded-2xl overflow-hidden h-48 mb-5 bg-slate-100">
+                  <img id="hito-img" src="assets/img/hitos/Casa_carreras.jpg"
+                    data-fallback="assets/img/hitos/placeholder-hito.svg" loading="lazy" decoding="async"
+                    alt="Hito patrimonial de El Monte"
+                    class="w-full h-full object-cover transition-all duration-300 cursor-zoom-in">
+                  <span id="hito-badge"
+                    class="absolute top-3 left-3 bg-patria-yellow text-patria-blue font-extrabold text-xs px-3 py-1 rounded-full shadow">
+                    Parada 01 • Inicio de Ruta
+                  </span>
+                </div>
+
+                <h4 id="hito-title" class="font-baloo text-2xl sm:text-3xl font-extrabold text-patria-blue">
+                  Casa de los Carrera / Fundo San Miguel
+                </h4>
+                <p id="hito-subtitle" class="text-xs font-bold uppercase tracking-wider text-slate-500 mt-1">
+                  Legado de Javiera y José Miguel Carrera
+                </p>
+                <p id="hito-desc" class="text-slate-600 text-sm mt-3 leading-relaxed">
+                  Hogar histórico de la familia protagonista de la Independencia de Chile. Aquí Javiera Carrera y sus
+                  hermanos gestaron hitos clave de la Patria Vieja. Un espacio vivo donde los estudiantes comprenden el
+                  nacimiento de nuestra identidad republicana.
+                </p>
+
+                <div class="mt-4 bg-blue-50/80 border border-blue-100 rounded-2xl p-3.5">
+                  <span class="text-xs font-bold text-patria-blue block mb-1">
+                    <i class="fa-solid fa-graduation-cap mr-1" aria-hidden="true"></i> Valor Curricular (6° y 7° Básico):
+                  </span>
+                  <p id="hito-edu" class="text-xs text-slate-700">
+                    Proceso de Independencia de Chile, rol de las mujeres en la historia (Javiera Carrera) y patrimonio
+                    arquitectónico rural.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+                <button type="button" data-action="next-hito"
+                  class="text-sm font-bold text-patria-blue hover:underline flex items-center gap-1.5 cursor-pointer">
+                  <span>Siguiente parada</span>
+                  <i class="fa-solid fa-chevron-right text-xs" aria-hidden="true"></i>
+                </button>
+                <a href="#salidas-pedagogicas"
+                  class="bg-patria-blue hover:bg-patria-darkblue text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl transition">
+                  Agendar Tour Escolar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo Especial: Salidas Pedagógicas y Activaciones BTL -->
+        <div id="salidas-pedagogicas"
+          class="bg-patria-blue text-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-xl relative overflow-hidden">
+          <div class="absolute -right-16 -bottom-16 w-72 h-72 rounded-full bg-patria-yellow/15 pointer-events-none"></div>
+
+          <div class="grid lg:grid-cols-12 gap-8 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-5">
+              <span
+                class="inline-block bg-patria-yellow text-patria-blue font-extrabold text-xs uppercase tracking-wider px-3.5 py-1 rounded-full">
+                Programa Educativo • Historia y Ciencias Sociales
+              </span>
+              <h3 class="font-baloo text-3xl sm:text-4xl font-extrabold leading-tight">
+                Profe, tu próxima clase puede ser en El Monte
+              </h3>
+              <p class="text-blue-100 text-sm sm:text-base leading-relaxed">
+                Diseñamos salidas pedagógicas significativas para cursos de <strong>6° y 7° básico</strong> y enseñanza
+                media. Transformamos los contenidos del aula en una experiencia en terreno con mediación patrimonial y
+                dinámicas participativas:
+              </p>
+
+              <div class="grid sm:grid-cols-3 gap-4 pt-2">
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-patria-yellow text-patria-blue flex items-center justify-center font-bold text-lg mb-3">
+                    <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+                  </div>
+                  <h4 class="font-baloo text-lg font-bold text-patria-yellow">Búsqueda del Tesoro</h4>
+                  <p class="text-xs text-blue-100 mt-1 leading-relaxed">
+                    Pistas históricas en cada parada de la ruta con recompensas educacionales al completar el recorrido.
+                  </p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-patria-yellow text-patria-blue flex items-center justify-center font-bold text-lg mb-3">
+                    <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+                  </div>
+                  <h4 class="font-baloo text-lg font-bold text-patria-yellow">Libro Gigante Vivo</h4>
+                  <p class="text-xs text-blue-100 mt-1 leading-relaxed">
+                    Instalación sensorial inmersiva sobre la Independencia de Chile con relatos sonoros reales.
+                  </p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-patria-yellow text-patria-blue flex items-center justify-center font-bold text-lg mb-3">
+                    <i class="fa-solid fa-guitar" aria-hidden="true"></i>
+                  </div>
+                  <h4 class="font-baloo text-lg font-bold text-patria-yellow">Fiesta Costumbrista</h4>
+                  <p class="text-xs text-blue-100 mt-1 leading-relaxed">
+                    Encuentro familiar post-ruta con artesanía local, gastronomía típica y folclor montino.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 bg-white text-slate-900 rounded-2xl p-6 shadow-xl">
+              <h4 class="font-baloo text-2xl font-extrabold text-patria-blue">Reserva Salida Pedagógica</h4>
+              <p class="text-xs text-slate-500 mb-4">Coordinación directa con Departamento de Turismo y Cultura (<span
+                  class="font-semibold text-patria-blue">contacto@turismoelmonte.cl</span>)</p>
+
+              <form id="pedagogica-form" class="space-y-3">
+                <div>
+                  <label for="ped-school" class="block text-xs font-bold text-slate-700 mb-1">Nombre del
+                    Establecimiento Educacional</label>
+                  <input id="ped-school" type="text" required placeholder="Ej: Colegio San Francisco / Liceo..."
+                    class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-patria-blue">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label for="ped-teacher" class="block text-xs font-bold text-slate-700 mb-1">Profesor/a a
+                      cargo</label>
+                    <input id="ped-teacher" type="text" required placeholder="Nombre y apellido"
+                      class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-patria-blue">
+                  </div>
+                  <div>
+                    <label for="ped-level" class="block text-xs font-bold text-slate-700 mb-1">Nivel / Curso</label>
+                    <select id="ped-level" required
+                      class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-patria-blue bg-white">
+                      <option>6° Básico</option>
+                      <option>7° Básico</option>
+                      <option>8° Básico</option>
+                      <option>Enseñanza Media</option>
+                      <option>Delegación Comunitaria</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="ped-contact" class="block text-xs font-bold text-slate-700 mb-1">Correo Institucional o
+                    Teléfono</label>
+                  <input id="ped-contact" type="text" required placeholder="profesor@colegio.cl / +56 9..."
+                    class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-patria-blue">
+                </div>
+                <button type="submit"
+                  class="w-full bg-patria-yellow hover:bg-yellow-400 text-patria-blue font-extrabold py-3 px-4 rounded-xl shadow transition cursor-pointer text-sm mt-1">
+                  Solicitar Fecha de Visita Guiada
+                </button>
+              </form>
+              <div id="pedagogica-feedback" role="status" aria-live="polite"
+                class="hidden mt-3 p-3 rounded-xl bg-green-50 border border-green-200 text-green-800 text-xs font-semibold">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 5. SECCIÓN 3: NOTICIAS Y AGENDA COMUNAL                              -->
+    <!-- ===================================================================== -->
+    <section id="noticias" data-tour-step="3" class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+          <div>
+            <span
+              class="inline-block bg-patria-lightyellow text-patria-blue font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-3">
+              Actualidad y Comunidad
+            </span>
+            <h2 class="font-baloo text-3xl sm:text-4xl font-extrabold text-patria-blue">
+              Noticias y Operativos en Terreno
+            </h2>
+            <p class="text-slate-600 text-sm sm:text-base mt-1">
+              Información clara, jerarquizada y cercana para los vecinos y vecinas de El Monte.
+            </p>
+          </div>
+          <a href="#contacto" class="inline-flex items-center gap-2 text-patria-blue font-bold text-sm hover:underline">
+            <span>Suscribirse al boletín vecinal</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article
+            class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card hover:shadow-card-hover transition flex flex-col">
+            <div class="relative h-44 bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80"
+                data-fallback="assets/img/hitos/Plaza.jpg" alt="Operativo Muni en tu Barrio" loading="lazy"
+                decoding="async" class="w-full h-full object-cover">
+              <span
+                class="absolute top-3 left-3 bg-patria-blue text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                En Terreno
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-semibold text-slate-400 block mb-1">Noviembre 2026</span>
+                <h3 class="font-baloo text-xl font-bold text-slate-900 leading-snug">
+                  "Muni en tu Barrio" llega a Villas Aguas Claras y Las Camelias
+                </h3>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  Atención social, registro de hogares, orientación jurídica y servicios veterinarios directos en tu
+                  sector.
+                </p>
+              </div>
+              <button type="button" data-tramite="fondeve"
+                class="mt-4 text-xs font-bold text-patria-blue hover:underline inline-flex items-center gap-1 cursor-pointer">
+                Ver horarios del operativo <i class="fa-solid fa-chevron-right text-[10px]" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card hover:shadow-card-hover transition flex flex-col">
+            <div class="relative h-44 bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80"
+                data-fallback="assets/img/hitos/Museo.jpg" alt="Postulaciones FONDEVE" loading="lazy" decoding="async"
+                class="w-full h-full object-cover">
+              <span
+                class="absolute top-3 left-3 bg-patria-yellow text-patria-blue text-[11px] font-extrabold px-3 py-1 rounded-full">
+                Fondos Concursables
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-semibold text-slate-400 block mb-1">Noviembre 2026</span>
+                <h3 class="font-baloo text-xl font-bold text-slate-900 leading-snug">
+                  Abiertas postulaciones al Fondo de Desarrollo Vecinal (FONDEVE)
+                </h3>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  Organizaciones comunitarias y juntas de vecinos ya pueden descargar las bases y presentar sus proyectos.
+                </p>
+              </div>
+              <button type="button" data-tramite="fondeve"
+                class="mt-4 text-xs font-bold text-patria-blue hover:underline inline-flex items-center gap-1 cursor-pointer">
+                Descargar bases aquí <i class="fa-solid fa-chevron-right text-[10px]" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card hover:shadow-card-hover transition flex flex-col">
+            <div class="relative h-44 bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=600&q=80"
+                data-fallback="assets/img/hitos/Plaza.jpg" alt="Adopción responsable de mascotas" loading="lazy"
+                decoding="async" class="w-full h-full object-cover">
+              <span
+                class="absolute top-3 left-3 bg-patria-blue text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                Medio Ambiente
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-semibold text-slate-400 block mb-1">Noviembre 2026</span>
+                <h3 class="font-baloo text-xl font-bold text-slate-900 leading-snug">
+                  Jornada de Adopción Responsable y Vacunación en Plaza Independencia
+                </h3>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  Perritos rescatados buscan un hogar definitivo. Incluye implantación de microchip y control sanitario
+                  gratuito.
+                </p>
+              </div>
+              <button type="button" data-tramite="ordenanzas"
+                class="mt-4 text-xs font-bold text-patria-blue hover:underline inline-flex items-center gap-1 cursor-pointer">
+                Conocer requisitos de adopción <i class="fa-solid fa-chevron-right text-[10px]" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card hover:shadow-card-hover transition flex flex-col">
+            <div class="relative h-44 bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80"
+                data-fallback="assets/img/hitos/Iglesia.jpg" alt="Portal Paciente CESFAM El Monte" loading="lazy"
+                decoding="async" class="w-full h-full object-cover">
+              <span
+                class="absolute top-3 left-3 bg-patria-blue text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                Salud Digital
+              </span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-semibold text-slate-400 block mb-1">Noviembre 2026</span>
+                <h3 class="font-baloo text-xl font-bold text-slate-900 leading-snug">
+                  Conoce el nuevo Portal Paciente del CESFAM El Monte
+                </h3>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  Revisa tus recetas, exámenes y próximas citaciones desde tu teléfono móvil sin hacer filas presenciales.
+                </p>
+              </div>
+              <button type="button" data-tramite="salud"
+                class="mt-4 text-xs font-bold text-patria-blue hover:underline inline-flex items-center gap-1 cursor-pointer">
+                Acceder con ClaveÚnica <i class="fa-solid fa-chevron-right text-[10px]" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 6. SECCIÓN 4: CONTACTO Y ATENCIÓN CIUDADANA                           -->
+    <!-- ===================================================================== -->
+    <section id="contacto" data-tour-step="4" class="py-16 lg:py-24 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-3xl mb-12">
+          <span
+            class="inline-flex items-center gap-2 bg-blue-100 text-patria-blue font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-3">
+            <i class="fa-solid fa-comments" aria-hidden="true"></i> Canales Oficiales y OIRS
+          </span>
+          <h2 class="font-baloo text-3xl sm:text-4xl lg:text-5xl font-extrabold text-patria-blue">
+            Contacto y Atención Ciudadana
+          </h2>
+          <p class="text-slate-600 mt-2 text-sm sm:text-base">
+            Estamos para escucharte y orientarte. Comunícate directamente con las unidades municipales, agenda visitas
+            educativas o ingresa una solicitud OIRS en línea.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-card">
+            <div
+              class="w-12 h-12 rounded-2xl bg-patria-blue text-patria-yellow flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-baloo text-xl font-bold text-slate-900">Mesa Central</h3>
+            <p class="text-xs text-slate-500 mt-1">Atención telefónica municipal</p>
+            <a href="tel:+56225609700"
+              class="mt-3 inline-block font-baloo text-2xl font-extrabold text-patria-blue hover:underline">
+              +56 2 2560 9700
+            </a>
+          </div>
+
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-card">
+            <div
+              class="w-12 h-12 rounded-2xl bg-patria-blue text-patria-yellow flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-baloo text-xl font-bold text-slate-900">Edificio Consistorial</h3>
+            <p class="text-xs text-slate-500 mt-1">Frente a Plaza Independencia</p>
+            <p class="mt-3 font-bold text-sm text-slate-800">
+              Av. Los Libertadores #277,<br />El Monte, Región Metropolitana
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-card">
+            <div
+              class="w-12 h-12 rounded-2xl bg-patria-blue text-patria-yellow flex items-center justify-center text-xl mb-4">
+              <i class="fa-regular fa-clock" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-baloo text-xl font-bold text-slate-900">Horario Presencial</h3>
+            <p class="text-xs text-slate-500 mt-1">Atención de público y cajas</p>
+            <p class="mt-3 font-bold text-sm text-slate-800">
+              Lunes a Viernes<br />08:30 a 14:00 horas
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-card">
+            <div
+              class="w-12 h-12 rounded-2xl bg-patria-blue text-patria-yellow flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-baloo text-xl font-bold text-slate-900">Correos Directos</h3>
+            <p class="text-xs text-slate-500 mt-1">Consultas y Ruta Patrimonial</p>
+            <div class="mt-3 space-y-1 text-xs font-bold text-patria-blue break-all">
+              <a href="mailto:contacto@munielmonte.cl" class="block hover:underline">contacto@munielmonte.cl</a>
+              <a href="mailto:contacto@turismoelmonte.cl"
+                class="block hover:underline text-slate-700">contacto@turismoelmonte.cl</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-card">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
+              <div>
+                <h3 class="font-baloo text-2xl sm:text-3xl font-extrabold text-patria-blue">Formulario de Contacto
+                  Ciudadano (OIRS)</h3>
+                <p class="text-xs sm:text-sm text-slate-500">Envía tus consultas, sugerencias o solicitudes de tours
+                  educativos.</p>
+              </div>
+              <span class="hidden sm:inline-block bg-green-50 text-green-700 text-xs font-bold px-3 py-1 rounded-full">
+                Respuesta en 48 hrs hábiles
+              </span>
+            </div>
+
+            <form id="contact-form" class="space-y-4">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="c-name" class="block text-xs font-bold text-slate-700 mb-1.5">Nombre Completo *</label>
+                  <input id="c-name" type="text" required autocomplete="name" placeholder="Ej: Camila Castillo"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-patria-blue focus:ring-2 focus:ring-patria-blue/15">
+                </div>
+                <div>
+                  <label for="c-rut" class="block text-xs font-bold text-slate-700 mb-1.5">RUT (Opcional)</label>
+                  <input id="c-rut" type="text" placeholder="Ej: 12.345.678-9"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-patria-blue focus:ring-2 focus:ring-patria-blue/15">
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="c-email" class="block text-xs font-bold text-slate-700 mb-1.5">Correo Electrónico *</label>
+                  <input id="c-email" type="email" required autocomplete="email" placeholder="vecino@correo.cl"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-patria-blue focus:ring-2 focus:ring-patria-blue/15">
+                </div>
+                <div>
+                  <label for="c-phone" class="block text-xs font-bold text-slate-700 mb-1.5">Teléfono de Contacto
+                    *</label>
+                  <input id="c-phone" type="tel" required autocomplete="tel" placeholder="+56 9 1234 5678"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-patria-blue focus:ring-2 focus:ring-patria-blue/15">
+                </div>
+              </div>
+
+              <div>
+                <label for="c-topic" class="block text-xs font-bold text-slate-700 mb-1.5">Tipo de Solicitud /
+                  Departamento *</label>
+                <select id="c-topic" required
+                  class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-patria-blue bg-white font-medium">
+                  <option value="Consulta General">Consulta General Municipal</option>
+                  <option value="Ruta de la Patria">Reserva Salida Pedagógica — Ruta de la Patria</option>
+                  <option value="Trámites y Tránsito">Trámites, Permisos de Circulación y Licencias</option>
+                  <option value="DIDECO y Social">DIDECO, Ayudas Sociales y FONDEVE</option>
+                  <option value="OIRS Reclamo/Sugerencia">OIRS: Sugerencia, Felicitación o Reclamo</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="c-msg" class="block text-xs font-bold text-slate-700 mb-1.5">Mensaje o Detalle de tu
+                  Solicitud *</label>
+                <textarea id="c-msg" rows="4" required placeholder="Escribe aquí tu consulta o solicitud..."
+                  class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-patria-blue focus:ring-2 focus:ring-patria-blue/15"></textarea>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+                <span class="text-xs text-slate-500 flex items-center gap-1.5">
+                  <i class="fa-solid fa-lock text-patria-blue" aria-hidden="true"></i> Tus datos están protegidos por
+                  la Ley 19.628.
+                </span>
+                <button type="submit"
+                  class="bg-patria-blue hover:bg-patria-darkblue text-white font-bold px-8 py-3.5 rounded-xl shadow-md transition transform hover:-translate-y-0.5 cursor-pointer text-sm flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-paper-plane text-patria-yellow" aria-hidden="true"></i>
+                  <span>Enviar Solicitud OIRS</span>
+                </button>
+              </div>
+            </form>
+
+            <div id="contact-success" role="status" aria-live="polite"
+              class="hidden mt-6 p-5 rounded-2xl bg-blue-50 border-2 border-patria-blue text-slate-800">
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-10 h-10 rounded-full bg-patria-blue text-patria-yellow flex items-center justify-center shrink-0 text-lg">
+                  <i class="fa-solid fa-check" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h4 class="font-baloo text-xl font-extrabold text-patria-blue">¡Solicitud recibida con éxito!</h4>
+                  <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                    Hemos registrado tu requerimiento en nuestra Oficina de Informaciones, Reclamos y Sugerencias (OIRS).
+                  </p>
+                  <div
+                    class="mt-3 inline-flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-lg border border-blue-200 text-xs font-bold text-patria-blue">
+                    <span>N° de Ticket: <span id="ticket-number" class="font-mono text-sm">ELM-2026-8492</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 space-y-6">
+            <div class="bg-white rounded-3xl p-5 border border-slate-200 shadow-card">
+              <div class="flex items-center justify-between mb-3">
+                <h4 class="font-baloo text-xl font-bold text-patria-blue">¿Cómo llegar al Municipio?</h4>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Los+Libertadores+277%2C+9810274+El+Monte%2C+Regi%C3%B3n+Metropolitana%2C+Chile"
+                  target="_blank" rel="noopener noreferrer"
+                  class="text-xs font-bold text-patria-blue hover:underline flex items-center gap-1">
+                  Abrir en Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"
+                    aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="relative rounded-2xl overflow-hidden h-64 sm:h-72 bg-blue-50 border border-slate-200">
+                <iframe title="Ubicación de la Municipalidad de El Monte"
+                  src="https://www.google.com/maps?q=Los+Libertadores+277,+9810274+El+Monte,+Regi%C3%B3n+Metropolitana,+Chile&output=embed"
+                  class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+
+            <div id="emergencias" class="bg-white rounded-3xl p-6 border-2 border-patria-red/20 shadow-card">
+              <div class="flex items-center gap-2.5 mb-4">
+                <span class="w-8 h-8 rounded-xl bg-patria-red text-white flex items-center justify-center text-sm">
+                  <i class="fa-solid fa-truck-medical" aria-hidden="true"></i>
+                </span>
+                <div>
+                  <h4 class="font-baloo text-xl font-extrabold text-slate-900">Teléfonos de Emergencia</h4>
+                  <p class="text-xs text-slate-500">Atención 24/7 en la comuna</p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3 text-xs">
+                <a href="tel:133"
+                  class="p-3 rounded-2xl bg-slate-50 hover:bg-red-50 border border-slate-200 transition">
+                  <span class="text-slate-500 block font-semibold">Carabineros</span>
+                  <span class="font-baloo text-lg font-extrabold text-patria-red">133</span>
+                </a>
+                <a href="tel:132"
+                  class="p-3 rounded-2xl bg-slate-50 hover:bg-red-50 border border-slate-200 transition">
+                  <span class="text-slate-500 block font-semibold">Bomberos El Monte</span>
+                  <span class="font-baloo text-lg font-extrabold text-patria-red">132</span>
+                </a>
+                <a href="tel:131"
+                  class="p-3 rounded-2xl bg-slate-50 hover:bg-red-50 border border-slate-200 transition">
+                  <span class="text-slate-500 block font-semibold">Ambulancia / SAPU</span>
+                  <span class="font-baloo text-lg font-extrabold text-patria-red">131</span>
+                </a>
+                <a href="tel:+56225609700"
+                  class="p-3 rounded-2xl bg-slate-50 hover:bg-blue-50 border border-slate-200 transition">
+                  <span class="text-slate-500 block font-semibold">Seguridad Pública</span>
+                  <span class="font-baloo text-base font-extrabold text-patria-blue">2 2560 9700</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-patria-blue text-white rounded-3xl p-6 shadow-card">
+              <h4 class="font-baloo text-xl font-bold text-patria-yellow">Ecosistema Digital Oficial</h4>
+              <p class="text-xs text-blue-100 mt-1 mb-4">Sigue nuestras cuentas oficiales verificadas con identidad
+                unificada:</p>
+              <div class="flex flex-wrap gap-2">
+                <a href="https://www.instagram.com/muni_elmonte/" target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 bg-white/15 hover:bg-patria-yellow hover:text-patria-blue px-3.5 py-2 rounded-full text-xs font-bold transition">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i> @muni_elmonte
+                </a>
+                <a href="https://www.instagram.com/turismo.elmonte/" target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 bg-white/15 hover:bg-patria-yellow hover:text-patria-blue px-3.5 py-2 rounded-full text-xs font-bold transition">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i> @turismo.elmonte
+                </a>
+                <a href="https://www.instagram.com/cultura_elmonte/" target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 bg-white/15 hover:bg-patria-yellow hover:text-patria-blue px-3.5 py-2 rounded-full text-xs font-bold transition">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i> @cultura_elmonte
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================== -->
+  <!-- 7. FOOTER INSTITUCIONAL                                               -->
+  <!-- ===================================================================== -->
+  <footer class="bg-patria-blue text-white pt-14 pb-24 border-t-4 border-patria-yellow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-12 gap-10 pb-10 border-b border-white/15">
+
+        <div class="md:col-span-5 space-y-4">
+          <svg class="h-16 w-auto" viewBox="0 0 260 112" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Logotipo institucional en versión negativa">
+            <circle cx="172" cy="34" r="21" fill="#FFD500" />
+            <path
+              d="M56 54V42L70 34V22H65V18H70V11H74V18H79V22H74V34L88 42V50L106 58L136 42C142 39 148 40 153 44L165 53L177 48C182 46 187 47 192 50L224 64"
+              stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M69 27C69 25.3431 70.3431 24 72 24C73.6569 24 75 25.3431 75 27V32H69V27Z" fill="#FFFFFF" />
+            <text x="24" y="84" fill="#FFFFFF" font-family="'Baloo 2', sans-serif" font-weight="800" font-size="40"
+              letter-spacing="-0.5">El Monte</text>
+            <path d="M52 94C95 85 140 87 185 95" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+            <path d="M156 91C182 86 205 87 226 92" stroke="#FFD500" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="28" y1="104" x2="44" y2="104" stroke="#FFD500" stroke-width="2.5" stroke-linecap="round" />
+            <text x="130" y="107" text-anchor="middle" fill="#FFFFFF" font-family="'Montserrat', sans-serif"
+              font-weight="700" font-size="8.5" letter-spacing="2.2">DONDE NACE LA PATRIA</text>
+            <line x1="216" y1="104" x2="232" y2="104" stroke="#FFD500" stroke-width="2.5" stroke-linecap="round" />
+          </svg>
+          <p class="text-blue-100 text-xs sm:text-sm max-w-sm leading-relaxed">
+            Ilustre Municipalidad de El Monte. Uniendo patrimonio histórico, cercanía comunitaria y gestión digital
+            moderna al servicio de nuestros vecinos.
+          </p>
+        </div>
+
+        <div class="md:col-span-3 space-y-2.5 text-sm">
+          <h5 class="font-baloo text-lg font-bold text-patria-yellow">Navegación</h5>
+          <ul class="space-y-2 text-blue-100 text-xs sm:text-sm">
+            <li><a href="#inicio" class="hover:text-white transition">Inicio</a></li>
+            <li><a href="#tramites" class="hover:text-white transition">Trámites y Servicios</a></li>
+            <li><a href="#ruta-patria" class="hover:text-white transition">Ruta de la Patria</a></li>
+            <li><a href="#salidas-pedagogicas" class="hover:text-white transition">Salidas Pedagógicas</a></li>
+            <li><a href="#contacto" class="hover:text-white transition">Contacto y OIRS</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-2.5 text-sm">
+          <h5 class="font-baloo text-lg font-bold text-patria-yellow">Transparencia y Normativa</h5>
+          <ul class="space-y-2 text-blue-100 text-xs sm:text-sm">
+            <li><button type="button" data-tramite="transparencia"
+                class="hover:text-white transition cursor-pointer">Transparencia Activa (Ley 20.285)</button></li>
+            <li><button type="button" data-tramite="transparencia"
+                class="hover:text-white transition cursor-pointer">Solicitar Información Pública</button></li>
+            <li><button type="button" data-tramite="ordenanzas"
+                class="hover:text-white transition cursor-pointer">Ordenanzas Municipales y PLADECO</button></li>
+            <li><a href="https://www.mercadopublico.cl" target="_blank" rel="noopener noreferrer"
+                class="hover:text-white transition">Licitaciones en Mercado Público</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-blue-200">
+        <p>© 2026 Ilustre Municipalidad de El Monte — Todos los derechos reservados.</p>
+        <p>Propuesta de Modernización Digital • Identidad Visual <span class="text-patria-yellow font-semibold">Ruta de
+            la Patria / Agencia Manzanilla</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- 8. REPRODUCTOR FLOTANTE "MODO RECORRIDO EN VIDEO"                     -->
+  <!-- ===================================================================== -->
+  <div id="video-tour-player" role="region" aria-label="Reproductor de recorrido guiado en video"
+    class="fixed bottom-4 left-4 right-4 sm:left-1/2 sm:-translate-x-1/2 sm:w-full sm:max-w-3xl z-50 hidden">
+    <div
+      class="bg-[#0B1736]/95 backdrop-blur-lg text-white rounded-3xl p-4 sm:p-5 shadow-2xl border-2 border-patria-yellow">
+
+      <div class="flex items-start gap-3 mb-3">
+        <span
+          class="bg-patria-red text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full flex items-center gap-1.5 shrink-0 mt-0.5">
+          <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span> REC TOUR
+        </span>
+        <p id="tour-subtitle" aria-live="polite" class="text-xs sm:text-sm font-medium text-white leading-snug">
+          “¡Hola vecinos y profes! Bienvenidos al nuevo portal digital de El Monte, donde nace la patria...”
+        </p>
+      </div>
+
+      <div id="tour-progress-track" class="w-full bg-white/20 h-2 rounded-full overflow-hidden mb-3 cursor-pointer">
+        <div id="tour-progress-bar" class="bg-patria-yellow h-full w-0 transition-all duration-300"></div>
+      </div>
+
+      <div class="flex items-center justify-between gap-2 text-xs">
+        <div class="flex items-center gap-2">
+          <button type="button" id="tour-play-pause-btn"
+            class="bg-patria-yellow text-patria-blue hover:bg-yellow-300 font-bold px-3.5 py-1.5 rounded-full flex items-center gap-1.5 transition cursor-pointer">
+            <i class="fa-solid fa-pause" aria-hidden="true"></i> <span>Pausar</span>
+          </button>
+          <button type="button" id="tour-prev-btn"
+            class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition cursor-pointer"
+            title="Escena anterior" aria-label="Escena anterior">
+            <i class="fa-solid fa-backward-step" aria-hidden="true"></i>
+          </button>
+          <button type="button" id="tour-next-btn"
+            class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition cursor-pointer"
+            title="Siguiente escena" aria-label="Siguiente escena">
+            <i class="fa-solid fa-forward-step" aria-hidden="true"></i>
+          </button>
+          <span id="tour-timer" class="font-mono text-blue-200 ml-1">00:00 / 00:45</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span id="tour-step-label" class="hidden sm:inline text-patria-yellow font-bold">Escena 1/5: Portada</span>
+          <button type="button" id="tour-stop-btn"
+            class="text-slate-300 hover:text-white font-semibold px-2.5 py-1 rounded-lg hover:bg-white/10 transition cursor-pointer">
+            <i class="fa-solid fa-xmark mr-1" aria-hidden="true"></i> Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- 9. MODALES INTERACTIVOS                                               -->
+  <!-- ===================================================================== -->
+  <div id="tramite-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+    class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div data-modal-dialog
+      class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border-t-8 border-patria-blue relative">
+      <button type="button" data-close-tramite
+        class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition cursor-pointer"
+        aria-label="Cerrar ventana">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+
+      <span id="modal-tag"
+        class="inline-block bg-patria-lightyellow text-patria-blue font-bold text-xs px-3 py-1 rounded-full mb-2">
+        Servicio Municipal
+      </span>
+      <h3 id="modal-title" class="font-baloo text-2xl sm:text-3xl font-extrabold text-patria-blue">
+        Título del Trámite
+      </h3>
+      <p id="modal-desc" class="text-slate-600 text-sm mt-2 leading-relaxed">
+        Descripción del servicio.
+      </p>
+
+      <div class="mt-5 bg-slate-50 rounded-2xl p-4 border border-slate-200/80">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Requisitos y Documentación:</h4>
+        <ul id="modal-reqs" class="space-y-1.5 text-xs sm:text-sm text-slate-700"></ul>
+      </div>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <a id="modal-action-link" href="#contacto" data-close-tramite
+          class="flex-1 bg-patria-blue hover:bg-patria-darkblue text-white font-bold py-3 px-5 rounded-xl text-center text-sm transition">
+          Gestionar / Solicitar Orientación
+        </a>
+        <button type="button" data-close-tramite
+          class="py-3 px-5 rounded-xl border border-slate-300 text-slate-700 font-semibold text-sm hover:bg-slate-50 transition cursor-pointer">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP PARA AMPLIAR IMAGEN DEL HITO -->
+  <div id="image-popup" role="dialog" aria-modal="true" aria-label="Imagen ampliada del hito patrimonial"
+    class="hidden fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm items-center justify-center p-4">
+
+    <button type="button" id="close-image-popup-btn"
+      class="absolute top-5 right-5 text-white text-3xl hover:text-yellow-400 transition cursor-pointer"
+      aria-label="Cerrar imagen">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+
+    <img id="image-popup-content" src="" alt="Imagen ampliada del hito patrimonial" decoding="async"
+      class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl">
+  </div>
+
+  <!-- Scripts de Datos y Lógica de Aplicación -->
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+
+</html>

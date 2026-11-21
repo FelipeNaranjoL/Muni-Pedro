@@ -1,0 +1,135 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #111827;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-baloo {
+  font-family: 'Baloo 2', sans-serif;
+}
+
+.hero-wave-bottom {
+  clip-path: ellipse(65% 100% at 50% 100%);
+}
+
+/* Resaltado visual durante el Modo Recorrido en Video */
+.tour-highlight {
+  outline: 4px solid #ffd500;
+  outline-offset: -4px;
+  box-shadow: inset 0 0 60px rgba(255, 213, 0, 0.12);
+  transition: outline-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Animación sutil para pulso de paradas en el mapa */
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 213, 0, 0.75);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 14px rgba(255, 213, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 213, 0, 0);
+  }
+}
+
+.map-pin-active {
+  animation: pulseRing 2s infinite;
+}
+
+/* Estabilidad de altura en escritorio al cambiar entre hitos */
+#hito-detail-panel {
+  min-height: 690px;
+}
+
+#hito-title {
+  min-height: 3.2em;
+}
+
+#hito-desc {
+  min-height: 9.5em;
+}
+
+#hito-edu {
+  min-height: 4.5em;
+}
+
+/* Barra de desplazamiento estilizada */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0039a6;
+  border-radius: 9999px;
+}
+
+@media (max-width: 1023px) {
+  #hito-detail-panel,
+  #hito-title,
+  #hito-desc,
+  #hito-edu {
+    min-height: 0;
+  }
+}
+
+/* Adaptación del mapa patrimonial para teléfonos */
+@media (max-width: 640px) {
+  #hito-map {
+    height: 290px;
+  }
+
+  #hito-map .map-pin {
+    width: 42px;
+    height: 42px;
+    padding: 4px;
+    border-radius: 50%;
+    justify-content: center;
+    gap: 0;
+  }
+
+  #hito-map .map-pin span:last-child {
+    display: none;
+  }
+
+  #hito-map .map-pin span:first-child {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    font-size: 13px;
+  }
+
+  #pin-0 {
+    top: 17%;
+    left: 12%;
+  }
+
+  #pin-1 {
+    top: 56%;
+    left: 39%;
+  }
+
+  #pin-2 {
+    top: 19%;
+    right: 10%;
+  }
+
+  #pin-3 {
+    bottom: 13%;
+    right: 16%;
+  }
+}
