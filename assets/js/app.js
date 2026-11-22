@@ -106,21 +106,11 @@
     });
   }
 
+  // Los colores de las pestañas (Re) los controla el HTML con aria-selected
+  // (clases aria-selected: y group-aria-selected: de Tailwind). Aquí solo se cambia ese atributo.
   function selectReTab(idx) {
-    document.querySelectorAll('.re-tab').forEach((tab, i) => {
-      const isSelected = i === idx;
-      const subLabel = tab.querySelector('span:last-child');
-      tab.classList.toggle('bg-patria-blue', isSelected);
-      tab.classList.toggle('text-white', isSelected);
-      tab.classList.toggle('border-patria-blue', isSelected);
-      tab.classList.toggle('bg-white', !isSelected);
-      tab.classList.toggle('text-patria-blue', !isSelected);
-      tab.classList.toggle('border-slate-200', !isSelected);
-
-      if (subLabel) {
-        subLabel.classList.toggle('text-blue-100', isSelected);
-        subLabel.classList.toggle('text-slate-600', !isSelected);
-      }
+    document.querySelectorAll('[data-re-tab]').forEach((tab, i) => {
+      tab.setAttribute('aria-selected', String(i === idx));
     });
     selectHito(idx);
   }

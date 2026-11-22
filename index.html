@@ -180,7 +180,7 @@
           <div class="lg:col-span-5">
             <div class="bg-white text-slate-900 rounded-3xl p-4 sm:p-5 shadow-2xl border-4 border-patria-yellow/90 relative">
               <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-200">
-                <img src="https://images.unsplash.com/photo-1589802829985-817e51171b92?auto=format&fit=crop&w=900&q=80"
+                <img src="/assets/img/hitos/Hero.jpg"
                   data-fallback="assets/img/hitos/Iglesia.jpg"
                   alt="Patrimonio arquitectónico colonial de El Monte" decoding="async"
                   class="w-full h-full object-cover" />
@@ -485,32 +485,32 @@
         <!-- Sistema de Titulares "(Re)..." -->
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-12" role="tablist"
           aria-label="Dimensiones de la Ruta de la Patria">
-          <button type="button" data-re-tab="0"
-            class="re-tab active-re bg-patria-blue text-white p-4 sm:p-5 rounded-2xl text-left shadow-md transition cursor-pointer border-2 border-patria-blue">
+          <button type="button" role="tab" aria-selected="true" data-re-tab="0"
+            class="re-tab group p-4 sm:p-5 rounded-2xl text-left transition cursor-pointer border-2 bg-white text-patria-blue border-slate-200 shadow-sm hover:bg-blue-50 aria-selected:bg-patria-blue aria-selected:text-white aria-selected:border-patria-blue aria-selected:shadow-md aria-selected:hover:bg-patria-blue">
             <span class="font-baloo text-xl sm:text-2xl font-extrabold block"><span
-                class="text-patria-yellow">(Re)</span>corre</span>
-            <span class="text-xs sm:text-sm text-blue-100 font-medium">el territorio montino</span>
+                class="text-patria-yellow bg-patria-blue px-1 rounded">(Re)</span>corre</span>
+            <span class="text-xs sm:text-sm font-medium text-slate-600 group-aria-selected:text-blue-100">el territorio montino</span>
           </button>
 
-          <button type="button" data-re-tab="1"
-            class="re-tab bg-white hover:bg-blue-50 text-patria-blue p-4 sm:p-5 rounded-2xl text-left shadow-sm transition cursor-pointer border-2 border-slate-200">
+          <button type="button" role="tab" aria-selected="false" data-re-tab="1"
+            class="re-tab group p-4 sm:p-5 rounded-2xl text-left transition cursor-pointer border-2 bg-white text-patria-blue border-slate-200 shadow-sm hover:bg-blue-50 aria-selected:bg-patria-blue aria-selected:text-white aria-selected:border-patria-blue aria-selected:shadow-md aria-selected:hover:bg-patria-blue">
             <span class="font-baloo text-xl sm:text-2xl font-extrabold block"><span
                 class="text-patria-yellow bg-patria-blue px-1 rounded">(Re)</span>conoce</span>
-            <span class="text-xs sm:text-sm text-slate-600 font-medium">tus raíces e identidad</span>
+            <span class="text-xs sm:text-sm font-medium text-slate-600 group-aria-selected:text-blue-100">tus raíces e identidad</span>
           </button>
 
-          <button type="button" data-re-tab="2"
-            class="re-tab bg-white hover:bg-blue-50 text-patria-blue p-4 sm:p-5 rounded-2xl text-left shadow-sm transition cursor-pointer border-2 border-slate-200">
+          <button type="button" role="tab" aria-selected="false" data-re-tab="2"
+            class="re-tab group p-4 sm:p-5 rounded-2xl text-left transition cursor-pointer border-2 bg-white text-patria-blue border-slate-200 shadow-sm hover:bg-blue-50 aria-selected:bg-patria-blue aria-selected:text-white aria-selected:border-patria-blue aria-selected:shadow-md aria-selected:hover:bg-patria-blue">
             <span class="font-baloo text-xl sm:text-2xl font-extrabold block"><span
                 class="text-patria-yellow bg-patria-blue px-1 rounded">(Re)</span>encuentra</span>
-            <span class="text-xs sm:text-sm text-slate-600 font-medium">el patrimonio vivo</span>
+            <span class="text-xs sm:text-sm font-medium text-slate-600 group-aria-selected:text-blue-100">el patrimonio vivo</span>
           </button>
 
-          <button type="button" data-re-tab="3"
-            class="re-tab bg-white hover:bg-blue-50 text-patria-blue p-4 sm:p-5 rounded-2xl text-left shadow-sm transition cursor-pointer border-2 border-slate-200">
+          <button type="button" role="tab" aria-selected="false" data-re-tab="3"
+            class="re-tab group p-4 sm:p-5 rounded-2xl text-left transition cursor-pointer border-2 bg-white text-patria-blue border-slate-200 shadow-sm hover:bg-blue-50 aria-selected:bg-patria-blue aria-selected:text-white aria-selected:border-patria-blue aria-selected:shadow-md aria-selected:hover:bg-patria-blue">
             <span class="font-baloo text-xl sm:text-2xl font-extrabold block"><span
                 class="text-patria-yellow bg-patria-blue px-1 rounded">(Re)</span>cuenta</span>
-            <span class="text-xs sm:text-sm text-slate-600 font-medium">la historia en terreno</span>
+            <span class="text-xs sm:text-sm font-medium text-slate-600 group-aria-selected:text-blue-100">la historia en terreno</span>
           </button>
         </div>
 
@@ -548,7 +548,7 @@
                   class="map-pin map-pin-active absolute top-[26%] left-[12%] sm:left-[15%] bg-patria-blue text-white px-3 py-2 rounded-2xl shadow-lg flex items-center gap-2 text-xs font-bold border-2 border-patria-yellow transition transform hover:scale-105 cursor-pointer">
                   <span
                     class="w-6 h-6 rounded-full bg-patria-yellow text-patria-blue flex items-center justify-center font-extrabold">1</span>
-                  <span>Humedal Río Mapocho</span>
+                  <span>Plaza Independencia</span>
                 </button>
 
                 <button type="button" data-hito="1" id="pin-1"
@@ -653,7 +653,7 @@
                 dinámicas participativas:
               </p>
 
-              <div class="grid sm:grid-cols-3 gap-4 pt-2">
+              <div class="grid sm:grid-cols-2 gap-4 pt-2">
                 <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-4">
                   <div
                     class="w-10 h-10 rounded-xl bg-patria-yellow text-patria-blue flex items-center justify-center font-bold text-lg mb-3">
@@ -673,17 +673,6 @@
                   <h4 class="font-baloo text-lg font-bold text-patria-yellow">Libro Gigante Vivo</h4>
                   <p class="text-xs text-blue-100 mt-1 leading-relaxed">
                     Instalación sensorial inmersiva sobre la Independencia de Chile con relatos sonoros reales.
-                  </p>
-                </div>
-
-                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-4">
-                  <div
-                    class="w-10 h-10 rounded-xl bg-patria-yellow text-patria-blue flex items-center justify-center font-bold text-lg mb-3">
-                    <i class="fa-solid fa-guitar" aria-hidden="true"></i>
-                  </div>
-                  <h4 class="font-baloo text-lg font-bold text-patria-yellow">Fiesta Costumbrista</h4>
-                  <p class="text-xs text-blue-100 mt-1 leading-relaxed">
-                    Encuentro familiar post-ruta con artesanía local, gastronomía típica y folclor montino.
                   </p>
                 </div>
               </div>
