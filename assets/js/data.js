@@ -65,10 +65,10 @@ window.PORTAL_DATA = {
     hitos: [
         {
             badge: 'Parada 01 • Naturaleza y Territorio',
-            title: 'Humedal Río Mapocho y Paisaje Local',
-            subtitle: 'Restauración Socioecológica y Tradiciones',
-            desc: 'Espacio natural de alto valor ecológico donde los estudiantes observan la flora y fauna nativa del valle central, comprendiendo la relación entre el territorio rural, el agua y la identidad campesina de El Monte.',
-            edu: 'Ciencias Naturales y Geografía: biodiversidad local, cuidado del agua y sustentabilidad comunitaria.',
+            title: 'Plaza Independencia y Entorno Cívico',
+            subtitle: 'MEMORIA URBANA Y VIDA BARRIAL',
+            desc: 'Corazón histórico y punto de encuentro cotidiano donde los estudiantes reconocen la organización del espacio público, el legado cívico y la dinámica social que articula la vida comunitaria de El Monte.',
+            edu: 'Historia, Geografía y Ciencias Sociales: espacio público, participación ciudadana, memoria local y transformación del entorno urbano',
             img: 'assets/img/hitos/Plaza.jpg'
 
         },
